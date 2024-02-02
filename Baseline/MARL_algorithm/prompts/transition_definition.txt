@@ -1,0 +1,48 @@
+def replenish(self, replenish_amount) -> None:
+    replenish_amount = actions
+
+    # Warehouse's replenishment is the replenishment as upstream's demand.
+    for warehouse in self._warehouse:
+        warehouse_replenish_amount = replenish_amount[self.warehouse_to_id[warehouse]]
+        upstream = self.get_upstream(warehouse)
+        if upstream is factory:
+            # If upstream is factory, the SKU will arrive in vlt dates later.
+            vlt = self.agent_states[warehouse, "vlt"]
+            arrived_date = self.calculate_arrived_date(vlt)
+            warehouse.receive_sku_in_future(arrived_date, replenish_amount)
+        else:
+            upstream.set_demand(warehouse_replenish_amount)
+
+def sell(self) -> None:
+    demand = self.get_demand()
+    in_stock = self.get_in_stock()
+    sale_amount = min(demand, in_stock)
+
+    self.in_stock -= sale_amount
+
+    # Sold sku will arrive downstream warehouse after vlt dates 
+    for warehouse in self._warehouse:
+        downstream = self.get_downstream(warehouse)
+        vlt = self.agent_states[warehouse, "vlt"]
+        arrived_date = self.calculate_arrived_date(vlt)
+        downstream.receive_sku_in_future(arrived_date, replenish_amount)
+
+def receive_sku(self) -> None:
+    for warehouse in self._warehouse:
+        # Arrived from upstream
+        arrive_amount = self.get_arrived_amount()
+        capacity = warehouse.capacity
+        if sum(accept_amount + warehouse.in_stock) >= capacity:
+            warehouse.abandon(sum(accept_amount + warehouse.in_stock) - capacity:)
+        warehouse.receive_sku(arrive_amount)
+
+def step(self, actions: np.array):
+    # Firstly compute the amount of SKU agent wants to replenish
+    self.replenish(actions)
+    # Second compute the amount of SKU sold to downstream. This will immediately change the stock amount
+    self.sell()
+    # Then conpute the amount of SKU received from upstream
+    self.receive_sku()
+
+
+

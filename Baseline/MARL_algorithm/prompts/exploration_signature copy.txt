@@ -1,0 +1,39 @@
+def compute_mask(agent_states: AgentStates, supply_chain: SupplyChain, action_space: list) -> torch.Tensor:
+    # Here are some code you can refer to when you generate your exploration functionm. Assume that we're working with a warehouse named store1
+    # Get the current inventory for all sku
+    # current_inventory = agent_states["store1", "in_stock", "today", "all_skus"]
+
+    # Get SKU in transit for all types of SKU
+    # in_transit = agent_states["store1", "in_transit", "today", "all_skus"]
+
+    # Get the number of SKU that will arrive today
+    # arrived = agent_states["store1", "arrived", "today", "all_skus"]
+
+    # Get the number of SKUs arriving on the N-th day in the future. Please note that agent_states.current_step+N < agent_states.durations should be guaranteed
+    # arrived = agent_states["store1", "arrived", agent_states.current_step+N, "all_skus"]
+
+    # Get the current leading time(how many days does it take for sku to arrive) for all SKU
+    # vlt = agent_states["store1", "vlt", "today", "all_skus"]
+
+    # Get the current property (e.g., in stock) for the j-th sku
+    # current_inventory = agent_states["store1", "in_stock", "today", j]
+
+    # Get the mean demand for all the skus in the past lookback period. Please note that the average is calculated on axis=1
+    # history_demand_mean = np.average(agent_states["store1", "demand", "lookback", "all_skus"], axis = 1)
+
+    # Get the number of replenishment if action a is selected
+    # replenishment = history_demand_mean*a
+
+    # Get the capacity for store1
+    # capacity = supply_chain["store1", "capacity"]
+
+    # Here are some tips you should note when you generate your response
+    # 1.The backlog_ratio and overflow_cost_ratio are fixed variables. They have nothing to do with the creation of backlog_cost and excess_cost, and only serve as weights.
+    # 2.backlog_cost is because the current inventory cannot meet the current downstream demand. A low inventory is probable to incur high backlog_cost
+    # 3.excess_cost is because the current inventory plus the SKUs arriving today exceed the capacity of the warehouse. A high sum of inventory of all SKUs is probable to incur excess_cost
+    # 4.capacity is shared among a warehouse, so it's meanless to compare capacity with the inventory of a single sku
+    # 5.your replenishment order will arrive after vlt days. So your replenishment action today will not affect your inventory today
+    # 6.You need to maintain as healthy an inventory as possible to meet downstream demand, but don't keep an inventory so large that it creates excess_cost
+    ...
+    return total_mask, {}
+    

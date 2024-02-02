@@ -1,0 +1,2 @@
+
+We trained a RL policy using the provided exploration function code and tracked the values of the individual components of the reward function as well as global policy metrics. We also compute the maximum, mean in the early training stage, mean in the late training stage, mean in all the training stage, minimum values for reward and its components after every {epoch_freq} epochs. Each element is a one-dimensional array of length n_warehouse, representing the value of that component on different warehouses: 

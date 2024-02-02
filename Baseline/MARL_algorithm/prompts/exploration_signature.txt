@@ -1,0 +1,33 @@
+def compute_mask(agent_states: AgentStates, supply_chain: SupplyChain, action_space: list):
+    # Here are some code you can refer to when you generate your exploration functionm. Assume that we're working with a warehouse named store1
+    # Get the current inventory for all sku
+    # current_inventory = agent_states["store1", "in_stock", "today", "all_skus"]
+
+    # Get SKU in transit for all types of SKU
+    # in_transit = agent_states["store1", "in_transit", "today", "all_skus"]
+
+    # Get the number of SKU that will arrive today
+    # arrived = agent_states["store1", "arrived", "today", "all_skus"]
+
+    # Get the number of SKUs arriving on the N-th day in the future. Please note that agent_states.current_step+N < agent_states.durations should be guaranteed
+    # arrived = agent_states["store1", "arrived", agent_states.current_step+N, "all_skus"]
+
+    # Get the current leading time(how many days does it take for today's replenishment to arrive) for all SKU
+    # vlt = agent_states["store1", "vlt", "today", "all_skus"]
+
+    # Get the current property (e.g., in stock) for the j-th sku
+    # current_inventory = agent_states["store1", "in_stock", "today", j]
+
+    # Get the mean demand for all the skus in the past lookback period. Please note that the average is calculated on axis=1
+    # history_demand_mean = np.average(agent_states["store1", "demand", "lookback", "all_skus"], axis = 1)
+
+    # Get the number of replenishment if action a is selected
+    # replenishment = history_demand_mean*a
+
+    # Get the capacity for store1
+    # capacity = supply_chain["store1", "capacity"]
+
+
+    ...
+    return total_mask, {}
+    

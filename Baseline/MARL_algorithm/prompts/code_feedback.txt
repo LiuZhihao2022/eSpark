@@ -1,0 +1,10 @@
+Please carefully analyze the policy feedback and provide a new, improved exploration function that can better solve the task. Some helpful tips for analyzing the policy feedback:
+    (1) You can start with "let's think step by step", and then look at each reward component individually and think about how can you improve it
+    (2) If the total reward maintains in the same level or even reduce, then you must rewrite the entire exploration function
+    (3) If a mask component blocks almost no action or it blocks almost all the actions, you must rewrite or discard this mask component
+    (4) If the values for a certain reward component are near identical throughout, then this means RL is not able to optimize this component as it is written. You can refer to the available actions distribution of related mask component and you may consider:
+        (a) Changing the temperature scale or value of the related mask component so that more action can be explored
+        (b) Re-writing the related mask component 
+        (c) Discarding the mask component or add a new mask component 
+    (5) If your modifications on a certain mask component aiming to change the action available frequency do not get the desired effect, you need to consider whether you have misunderstood the meaning of the relevant state items. Please re-read the relevant code and comments in the state definition, and rewrite or discard the mask component.
+    (6) Most importantly, because the total reward is composed of multiple reward components, you should carefully analyze how each component contributes to the total reward, and then update your mask components to improve the reward components and total reward. 

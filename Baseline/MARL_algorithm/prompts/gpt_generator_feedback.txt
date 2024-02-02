@@ -1,0 +1,4 @@
+Here is the latest exploration function and it's description:
+{gpt_response}
+
+Please carefully review this code, check whether it matches the task description and whether it contains any illogical errors in the code content, and evaluate whether it's possible to improve the exploration and the performance.

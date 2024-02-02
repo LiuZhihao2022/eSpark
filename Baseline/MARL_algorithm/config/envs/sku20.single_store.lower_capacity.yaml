@@ -1,0 +1,13 @@
+env: "replenishment"
+
+env_args:
+  key: "replenishment_efficient_env-v0"
+  # map_name: "different_order_cost"
+  map_name: "sku20.single_store.lower_capacity"
+  n_agents: 2
+  # task_type: "different_order_cost"
+  task_type: "sku20.single_store.lower_capacity"
+  mode: train
+  time_limit: 100
+  reward: "reward2"
+  

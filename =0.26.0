@@ -1,0 +1,24 @@
+Collecting gym
+  Using cached gym-0.26.2.tar.gz (721 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: numpy>=1.18.0 in /data/xianliang/miniconda3/envs/re_rl_algo/lib/python3.8/site-packages (from gym) (1.24.3)
+Collecting cloudpickle>=1.2.0 (from gym)
+  Downloading cloudpickle-3.0.0-py3-none-any.whl.metadata (7.0 kB)
+Collecting gym-notices>=0.0.4 (from gym)
+  Using cached gym_notices-0.0.8-py3-none-any.whl (3.0 kB)
+Requirement already satisfied: importlib-metadata>=4.8.0 in /data/xianliang/miniconda3/envs/re_rl_algo/lib/python3.8/site-packages (from gym) (6.8.0)
+Requirement already satisfied: zipp>=0.5 in /data/xianliang/miniconda3/envs/re_rl_algo/lib/python3.8/site-packages (from importlib-metadata>=4.8.0->gym) (3.11.0)
+Downloading cloudpickle-3.0.0-py3-none-any.whl (20 kB)
+Building wheels for collected packages: gym
+  Building wheel for gym (pyproject.toml): started
+  Building wheel for gym (pyproject.toml): finished with status 'done'
+  Created wheel for gym: filename=gym-0.26.2-py3-none-any.whl size=827618 sha256=3ee272cb82f652e77f3b2e6311e602f30cd2fbaeeb240efa1299ccb75970c80e
+  Stored in directory: /data/xianliang/.cache/pip/wheels/17/79/65/7afedc162d858b02708a3b8f7a6dd5b1000dcd5b0f894f7cc1
+Successfully built gym
+Installing collected packages: gym-notices, cloudpickle, gym
+Successfully installed cloudpickle-3.0.0 gym-0.26.2 gym-notices-0.0.8

@@ -1,0 +1,6 @@
+You are an expert in both inventory management learning and reinforcement learning. You are trying to write some exploration functions, which helps mask some actions that are logically unlikely to be selected, to help exploration in reinforcement learning tasks as effective as possible.
+Your goal is to write a exploration function for the agent that will mask the actions that's almost impossible to be chosen in the task described in text. 
+The exploration function signature can be: 
+{task_exploration_signature_string}
+Your exploration function should only use the variables from the argument list.
+Please just give only the exploration function and don't put it in a class. Please make sure that the code is compatible with numpy (e.g., use numpy array instead of torch tensor). 

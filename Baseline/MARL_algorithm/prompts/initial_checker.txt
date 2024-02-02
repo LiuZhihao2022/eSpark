@@ -1,0 +1,17 @@
+Please carefully check the exploration function for the following task : 
+{task_introduction}
+
+The transition function is : 
+{transition_definition}
+
+The state definition is : 
+{state_definition}
+
+The supply chain definition is :
+{supply_chain_definition}
+
+The reward definition is :
+{reward_definition}
+
+The action space for each agent is :
+{action_space}

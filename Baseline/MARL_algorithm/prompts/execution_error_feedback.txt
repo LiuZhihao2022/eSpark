@@ -1,0 +1,3 @@
+Executing the exploration function codes you generated before has the following errors: 
+{traceback_msg} 
+Please fix the bug and provide a new, improved exploration function!
